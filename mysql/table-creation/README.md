@@ -32,13 +32,13 @@ CREATE TABLE favorite_food
 );
 ```
 
-You can see table information after creation with the `DESC` statement:
+You can see a table's information after creation with the `DESC` statement:
 
 ```sql
 DESC favorite_food`
 ```
 
-And you can also update the table via the `ALTER_TABLE` statement.
+You can update a table via the `ALTER TABLE` statement and delete it via `DROP TABLE`.
 
 ## Constraints
 
