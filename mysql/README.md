@@ -1,6 +1,7 @@
 # MySQL
 
 * What is MySQL?
+* Creating a sample database
 * [Data Types](./data-types)
 
 ## What is MySQL?
