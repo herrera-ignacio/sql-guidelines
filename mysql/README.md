@@ -3,6 +3,9 @@
 * What is MySQL?
 * Creating a sample database
 * [Data Types](./data-types)
+* [Table Creation](./table-creation)
+* [Table Population & Modifiction](./table-operations)
+* [Statements Go Bad](./statements-errors)
 
 ## What is MySQL?
 
