@@ -9,6 +9,9 @@
     * Table Types (Subquering and Views)
     * Table Links
     * Table Aliases
+  * `WHERE`
+  * `GROUP BY` & `HAVING`
+  * `ORDER BY`
 
 ## Query Mechanics
 
@@ -175,4 +178,97 @@ Here's the same query that we used before:
 SELECT e.emp_id, e.fname, e.lname, d.name AS dept_name
 FROM employee AS e INNER JOIN department AS d
 ON e.dept_id = d.dept_id;
+```
+
+## WHERE
+
+The `WHERE` clause is the mechanism for filtering out unwanted rows from your result set.
+
+```sql
+SELECT emp_id, fname, lname, start_date, title
+  FROM employee
+  WHERE title = 'Head Teller';
+```
+
+You can include as many conditions as required using separators as `AND`, `OR`, and `NOT`.
+
+```sql
+SELECT emp_id, fname, lname, start_date, title
+  FROM employee
+  WHERE title = 'Head Teller'
+    AND start_date > '2006-01-01';
+```
+
+```sql
+SELECT emp_id, fname, lname, start_date, title
+  FROM employee
+  WHERE (title = 'Head Teller' AND start_date > '2006-01-01')
+    OR (title = 'Teller' AND start_date > '2007-01-01');
+```
+
+## GROUP BY and HAVING
+
+`GROUP BY` is used to group data by column values. For example, rather than looking at a list of employees and the departments to which they are assigned, you might want to look at a list of departments along with the numbers of employees assigned to each department.
+
+When using the `GROUP BY` clause, you may also use the `HAVING` clause, which allows you to filter group data in the same way the `WHERE` clause lets you filter raw data.
+
+```sql
+SELECT d.name, COUNT(e.emp_id) AS num_employees
+  FROM department AS d INNER JOIN employee AS e
+    ON d.dept_id = e.dept_id
+  GROUP BY d.name
+    HAVING COUNT(e.emp_id) > 2;
+```
+
+## ORDER BY
+
+The `ORDER BY` clause is the mechanism for sorting your result set using either raw column data or expressions based on column data.
+
+The default is `ASC` (Ascending) but you can also add the keyword `DESC` (Descending).
+
+```sql
+SELECT open_emp_id, product_cd
+FROM account
+ORDER BY open_emp_id DESC;
+```
+
+If you provide multiple columns, first the rows will be sorted based on the first column, and then by the second column.
+
+```sql
+SELECT open_emp_id, product_cd
+FROM account
+ORDER BY open_emp_id, product_cd;
+```
+
+A usefull clause used with `ORDER BY` is `LIMIT` clause, that allows to discard all but the first X rows.
+
+```sql
+SELECT open_emp_id, product_cd
+FROM account
+ORDER BY open_emp_id, product_cd
+LIMIT 5;
+```
+
+### Sorting via Expressions
+
+Sometimes you might need to sort by something that is not stored in the database, and possible doesn't appear anywhere in your query. You can add expressions to your `ORDER BY` clause.
+
+For example, perhaps you would like to sort yor customer data by the last three digits of the customer's federal ID number.
+
+```sql
+SELECT cust_id, cust_type_cd, city, state, fed_id
+  FROM customer
+  ORDER BY RIGHT(fed_id, 3);
+```
+
+### Sorting via Numeric Placeholders
+
+If you are sorting using the columns in your `SELECT` clause, you can opt to reference the columns by their _position_ in the `SELECT` clause rather than by name.
+
+For example if you want to sort using the second and fifh columns:
+
+```sql
+SELECT emp_id, title, start_date, fname, lname
+FROM employee
+ORDER BY 2, 5;
 ```
