@@ -6,6 +6,7 @@
 * [Table Creation](./table-creation)
 * [Table Population & Modifiction](./table-operations)
 * [Statements Go Bad](./statements-errors)
+* [Querying](./querying)
 
 ## What is MySQL?
 
@@ -46,6 +47,7 @@ mysql -u <your_user> -p
 And attach to the created database
 
 ```
+show databases;
 use bank;
 ```
 
