@@ -4,7 +4,7 @@
 
 * [Introduction](./introduction)
 * [MySQL - Intro](./mysql)
-* [Query Primer](./mysql/query-primer)
+* [Query Primer](./mysql/querying)
 * [Filtering](./mysql/filtering)
 * [Query multiple tables (Join Intro)](./mysql/join-intro)
 * [Sets](./mysql/sets)
