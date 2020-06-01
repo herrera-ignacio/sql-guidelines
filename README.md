@@ -12,7 +12,7 @@
 * [Grouping and Aggregates](./mysql/grouping-aggregates)
 * [Subqueries](./mysql/subqueries)
 * [Joins in detail](./mysql/joins)
-* [Conditional Logic](./mysql/conditional)
+* [Conditional Logic](./mysql/conditional-logic)
 * [Transaction](./mysql/transactions)
 * [Indexes and Constraints](./mysql/indexes)
 * [Views](./mysql/views)
