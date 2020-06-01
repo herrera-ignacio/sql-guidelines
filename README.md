@@ -13,7 +13,7 @@
 * [Subqueries](./mysql/subqueries)
 * [Joins in detail](./mysql/joins)
 * [Conditional Logic](./mysql/conditional-logic)
-* [Transaction](./mysql/transactions)
+* [Transactions](./mysql/transactions)
 * [Indexes and Constraints](./mysql/indexes)
 * [Views](./mysql/views)
 * [Metadata](./mysql/metadata)
