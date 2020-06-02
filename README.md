@@ -12,8 +12,6 @@
 * [Grouping & Aggregates](./mysql/grouping-aggregates)
 * [Subqueries](./mysql/subqueries)
 * [Joins in detail](./mysql/joins)
-* [Conditional Logic](./mysql/conditional)
 * [Transaction](./mysql/transactions)
 * [Indexes & Constraints](./mysql/indexes)
 * [Views](./mysql/views)
-* [Metadata](./mysql/metadata)
