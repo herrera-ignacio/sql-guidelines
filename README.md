@@ -16,3 +16,4 @@
 * [Indexes & Constraints](./mysql/indexes)
 * [Views](./mysql/views)
 * [Metadata](./mysql/metadata)
+* [Stored Procedures](./mysql/stored_procedures)
