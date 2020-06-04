@@ -15,3 +15,4 @@
 * [Transaction](./mysql/transactions)
 * [Indexes & Constraints](./mysql/indexes)
 * [Views](./mysql/views)
+* [Metadata](./mysql/metadata)
